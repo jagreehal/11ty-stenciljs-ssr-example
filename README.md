@@ -18,11 +18,14 @@ config.addTransform("ssr", async (content, outputPath) => {
 });
 ```
 
-## trying it out
+## demo
 
-Install using yarn and then run
+[See it in action!](https://jagreehal.github.io/11ty-stenciljs-ssr-example/)
+
+## dev
 
 ```bash
+yarn
 yarn start
 ```
 
