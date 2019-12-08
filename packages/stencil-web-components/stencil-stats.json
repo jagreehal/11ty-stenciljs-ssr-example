@@ -1,0 +1,53 @@
+{
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.8.1"
+  },
+  "app": {
+    "namespace": "StencilWebComponents",
+    "fsNamespace": "stencil-web-components",
+    "components": 1,
+    "entries": 1,
+    "bundles": 0
+  },
+  "options": {
+    "minifyJs": true,
+    "minifyCss": true,
+    "hashFileNames": true,
+    "hashedFileNameLength": 8,
+    "buildEs5": true
+  },
+  "components": [
+    {
+      "tag": "my-component",
+      "dependencyOf": [],
+      "dependencies": []
+    }
+  ],
+  "entries": [
+    {
+      "entryId": "my-component.entry",
+      "components": [
+        {
+          "tag": "my-component",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/my-component/my-component.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "scoped"
+      ]
+    }
+  ],
+  "sourceGraph": {
+    "src/components/my-component/my-component.tsx": []
+  },
+  "collections": []
+}
