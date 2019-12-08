@@ -1,4 +1,4 @@
-// const htmlmin = require("html-minifier");
+const htmlmin = require("html-minifier");
 const { renderToString } = require("stencil-web-components/hydrate");
 module.exports = function(config) {
   config.addPassthroughCopy("static");
@@ -12,11 +12,11 @@ module.exports = function(config) {
       try {
         const { html } = await renderToString(content);
         return html;
-        // return htmlmin.minify(html, {
-        //   useShortDoctype: true,
-        //   removeComments: false,
-        //   collapseWhitespace: true
-        // });
+        return htmlmin.minify(html, {
+          useShortDoctype: true,
+          removeComments: false,
+          collapseWhitespace: true
+        });
       } catch (error) {
         return error;
       }
