@@ -60,6 +60,7 @@ _site
 # stencil files
 dist
 loader
+www
 
 # Mac files
 .DS_Store

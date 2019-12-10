@@ -183,6 +183,10 @@ const h = (nodeName, vnodeData, ...children) => {
             }
         }
     }
+    if ( typeof nodeName === 'function') {
+        // nodeName is a functional component
+        return nodeName(vnodeData, vNodeChildren, vdomFnUtils);
+    }
     const vnode = newVNode(nodeName, null);
     vnode.$attrs$ = vnodeData;
     if (vNodeChildren.length > 0) {
@@ -211,6 +215,28 @@ const newVNode = (tag, text) => {
 };
 const Host = {};
 const isHost = (node) => node && node.$tag$ === Host;
+const vdomFnUtils = {
+    'forEach': (children, cb) => children.map(convertToPublic).forEach(cb),
+    'map': (children, cb) => children.map(convertToPublic).map(cb).map(convertToPrivate)
+};
+const convertToPublic = (node) => {
+    return {
+        vattrs: node.$attrs$,
+        vchildren: node.$children$,
+        vkey: node.$key$,
+        vname: node.$name$,
+        vtag: node.$tag$,
+        vtext: node.$text$
+    };
+};
+const convertToPrivate = (node) => {
+    const vnode = newVNode(node.vtag, node.vtext);
+    vnode.$attrs$ = node.vattrs;
+    vnode.$children$ = node.vchildren;
+    vnode.$key$ = node.vkey;
+    vnode.$name$ = node.vname;
+    return vnode;
+};
 /**
  * Production setAccessor() function based on Preact by
  * Jason Miller (@developit)
@@ -430,6 +456,9 @@ const putBackInOriginalLocation = (parentElm, recursive) => {
 const addVnodes = (parentElm, before, parentVNode, vnodes, startIdx, endIdx) => {
     let containerElm = (( parentElm['s-cr'] && parentElm['s-cr'].parentNode) || parentElm);
     let childNode;
+    if ( containerElm.shadowRoot && containerElm.tagName === hostTagName) {
+        containerElm = containerElm.shadowRoot;
+    }
     for (; startIdx <= endIdx; ++startIdx) {
         if (vnodes[startIdx]) {
             childNode = createElm(null, parentVNode, startIdx, parentElm);
@@ -708,7 +737,7 @@ const renderVdom = (hostElm, hostRef, cmpMeta, renderFnResults) => {
     rootVnode.$tag$ = null;
     rootVnode.$flags$ |= 4 /* isHost */;
     hostRef.$vnode$ = rootVnode;
-    rootVnode.$elm$ = oldVNode.$elm$ = ( hostElm);
+    rootVnode.$elm$ = oldVNode.$elm$ = ( hostElm.shadowRoot || hostElm );
     {
         scopeId = hostElm['s-sc'];
     }
@@ -1565,6 +1594,39 @@ const registerHost = (elm) => {
 };
 const styles = new Map();
 
+const SEARCH = "//api.github.com/search/repositories";
+const Result = ({ result }) => {
+    return (h("div", { class: "result" }, h("div", null, h("a", { href: result.html_url, target: "_blank" }, result.full_name), "\uD83C\uDF1F", h("strong", null, result.stargazers_count)), h("p", null, result.description)));
+};
+class FetchExample {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+        this.q = "stencil";
+        this.results = [];
+    }
+    componentDidLoad() {
+        fetch(`${SEARCH}?q=${this.q}`)
+            .then(r => r.json())
+            .then(json => {
+            this.results = (json && json.items) || [];
+        });
+    }
+    render() {
+        return (h("div", null, h("div", { class: "list" }, this.results.map(result => (h(Result, { result: result }))))));
+    }
+    static get cmpMeta() { return {
+        "$flags$": 0,
+        "$tagName$": "fetch-example",
+        "$members$": {
+            "q": [1],
+            "results": [32]
+        },
+        "$listeners$": undefined,
+        "$lazyBundleIds$": "-",
+        "$attrsToReflect$": []
+    }; }
+}
+
 class MyComponent {
     constructor(hostRef) {
         registerInstance(this, hostRef);
@@ -1624,10 +1686,114 @@ class MyComponent {
     }; }
 }
 
+class ScopedExample {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    render() {
+        return (h("div", { class: "text" }, "Hello, my name is ", this.first, " ", this.last));
+    }
+    static get cmpMeta() { return {
+        "$flags$": 2,
+        "$tagName$": "scoped-example",
+        "$members$": {
+            "first": [1],
+            "last": [1]
+        },
+        "$listeners$": undefined,
+        "$lazyBundleIds$": "-",
+        "$attrsToReflect$": []
+    }; }
+}
+
+class ShadowExample {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    render() {
+        return (h("div", { class: "text" }, "Hello, my name is ", this.first, " ", this.last));
+    }
+    static get cmpMeta() { return {
+        "$flags$": 9,
+        "$tagName$": "shadow-example",
+        "$members$": {
+            "first": [1],
+            "last": [1]
+        },
+        "$listeners$": undefined,
+        "$lazyBundleIds$": "-",
+        "$attrsToReflect$": []
+    }; }
+}
+
+class SlotExample {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    render() {
+        return (h("div", null, h("div", null, "Above the slot"), h("slot", null), h("div", null, "Below the slot")));
+    }
+    static get cmpMeta() { return {
+        "$flags$": 4,
+        "$tagName$": "slot-example",
+        "$members$": {
+            "first": [1],
+            "last": [1]
+        },
+        "$listeners$": undefined,
+        "$lazyBundleIds$": "-",
+        "$attrsToReflect$": []
+    }; }
+}
+
+class SlotScopedExample {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    render() {
+        return (h(Host, null, h("div", { class: "text" }, "Above the slot"), h("slot", null), h("div", { class: "text" }, "Below the slot")));
+    }
+    static get cmpMeta() { return {
+        "$flags$": 6,
+        "$tagName$": "slot-scoped-example",
+        "$members$": undefined,
+        "$listeners$": undefined,
+        "$lazyBundleIds$": "-",
+        "$attrsToReflect$": []
+    }; }
+}
+
+class SlotShadowExample {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    render() {
+        return (h(Host, null, h("div", { class: "text" }, "Above the slot"), h("slot", null), h("div", { class: "text" }, "Below the slot")));
+    }
+    static get cmpMeta() { return {
+        "$flags$": 9,
+        "$tagName$": "slot-shadow-example",
+        "$members$": undefined,
+        "$listeners$": undefined,
+        "$lazyBundleIds$": "-",
+        "$attrsToReflect$": []
+    }; }
+}
+
 const cmps = [
+  FetchExample,
   MyComponent,
+  ScopedExample,
+  ShadowExample,
+  SlotExample,
+  SlotScopedExample,
+  SlotShadowExample,
 ];
 registerComponents(cmps);
 styles.set('sc-my-component','.message.sc-my-component{color:var(--my-component-color,#00f)}');
+styles.set('sc-scoped-example','.text.sc-scoped-example{color:red}');
+styles.set('sc-shadow-example','/*!\@.text*/.text.sc-shadow-example{color:orange}');
+styles.set('sc-slot-scoped-example','.text.sc-slot-scoped-example{color:#6e6ead}');
+styles.set('sc-slot-shadow-example','/*!\@.text*/.text.sc-slot-shadow-example{color:green}');
 
 exports.bootstrapHydrate = bootstrapHydrate;

@@ -4,6 +4,11 @@ export const config: Config = {
   namespace: "stencil-web-components",
   outputTargets: [
     {
+      type: "www",
+      // comment the following line to disable service workers in production
+      serviceWorker: null
+    },
+    {
       type: "dist",
       esmLoaderPath: "../loader"
     },

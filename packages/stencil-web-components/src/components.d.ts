@@ -10,6 +10,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface FetchExample {
+    'q': string;
+  }
   interface MyComponent {
     /**
     * The count value
@@ -28,22 +31,81 @@ export namespace Components {
     */
     'middle': string;
   }
+  interface ScopedExample {
+    'first': string;
+    'last': string;
+  }
+  interface ShadowExample {
+    'first': string;
+    'last': string;
+  }
+  interface SlotExample {
+    'first': string;
+    'last': string;
+  }
+  interface SlotScopedExample {}
+  interface SlotShadowExample {}
 }
 
 declare global {
 
+
+  interface HTMLFetchExampleElement extends Components.FetchExample, HTMLStencilElement {}
+  var HTMLFetchExampleElement: {
+    prototype: HTMLFetchExampleElement;
+    new (): HTMLFetchExampleElement;
+  };
 
   interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
     prototype: HTMLMyComponentElement;
     new (): HTMLMyComponentElement;
   };
+
+  interface HTMLScopedExampleElement extends Components.ScopedExample, HTMLStencilElement {}
+  var HTMLScopedExampleElement: {
+    prototype: HTMLScopedExampleElement;
+    new (): HTMLScopedExampleElement;
+  };
+
+  interface HTMLShadowExampleElement extends Components.ShadowExample, HTMLStencilElement {}
+  var HTMLShadowExampleElement: {
+    prototype: HTMLShadowExampleElement;
+    new (): HTMLShadowExampleElement;
+  };
+
+  interface HTMLSlotExampleElement extends Components.SlotExample, HTMLStencilElement {}
+  var HTMLSlotExampleElement: {
+    prototype: HTMLSlotExampleElement;
+    new (): HTMLSlotExampleElement;
+  };
+
+  interface HTMLSlotScopedExampleElement extends Components.SlotScopedExample, HTMLStencilElement {}
+  var HTMLSlotScopedExampleElement: {
+    prototype: HTMLSlotScopedExampleElement;
+    new (): HTMLSlotScopedExampleElement;
+  };
+
+  interface HTMLSlotShadowExampleElement extends Components.SlotShadowExample, HTMLStencilElement {}
+  var HTMLSlotShadowExampleElement: {
+    prototype: HTMLSlotShadowExampleElement;
+    new (): HTMLSlotShadowExampleElement;
+  };
   interface HTMLElementTagNameMap {
+    'fetch-example': HTMLFetchExampleElement;
     'my-component': HTMLMyComponentElement;
+    'scoped-example': HTMLScopedExampleElement;
+    'shadow-example': HTMLShadowExampleElement;
+    'slot-example': HTMLSlotExampleElement;
+    'slot-scoped-example': HTMLSlotScopedExampleElement;
+    'slot-shadow-example': HTMLSlotShadowExampleElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface FetchExample {
+    'q'?: string;
+  }
   interface MyComponent {
     /**
     * The count value
@@ -63,9 +125,29 @@ declare namespace LocalJSX {
     'middle'?: string;
     'onEvent'?: (event: CustomEvent<number>) => void;
   }
+  interface ScopedExample {
+    'first'?: string;
+    'last'?: string;
+  }
+  interface ShadowExample {
+    'first'?: string;
+    'last'?: string;
+  }
+  interface SlotExample {
+    'first'?: string;
+    'last'?: string;
+  }
+  interface SlotScopedExample {}
+  interface SlotShadowExample {}
 
   interface IntrinsicElements {
+    'fetch-example': FetchExample;
     'my-component': MyComponent;
+    'scoped-example': ScopedExample;
+    'shadow-example': ShadowExample;
+    'slot-example': SlotExample;
+    'slot-scoped-example': SlotScopedExample;
+    'slot-shadow-example': SlotShadowExample;
   }
 }
 
@@ -75,7 +157,13 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'fetch-example': LocalJSX.FetchExample & JSXBase.HTMLAttributes<HTMLFetchExampleElement>;
       'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+      'scoped-example': LocalJSX.ScopedExample & JSXBase.HTMLAttributes<HTMLScopedExampleElement>;
+      'shadow-example': LocalJSX.ShadowExample & JSXBase.HTMLAttributes<HTMLShadowExampleElement>;
+      'slot-example': LocalJSX.SlotExample & JSXBase.HTMLAttributes<HTMLSlotExampleElement>;
+      'slot-scoped-example': LocalJSX.SlotScopedExample & JSXBase.HTMLAttributes<HTMLSlotScopedExampleElement>;
+      'slot-shadow-example': LocalJSX.SlotShadowExample & JSXBase.HTMLAttributes<HTMLSlotShadowExampleElement>;
     }
   }
 }
