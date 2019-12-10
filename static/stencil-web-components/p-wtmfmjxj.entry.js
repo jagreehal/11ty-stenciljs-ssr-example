@@ -1,0 +1,1 @@
+import{r as s,h as e}from"./p-2e895d0d.js";const r=class{constructor(e){s(this,e)}render(){return e("div",null,"Hello, my name is ",this.first," ",this.last)}};export{r as fetch_example};

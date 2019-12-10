@@ -1,0 +1,1 @@
+import{r as t,h as s}from"./p-7523777f.js";const e=()=>{},r=class{constructor(s){t(this,s),this.results=[]}componentDidMount(){fetch("//api.github.com/search/repositories?q=preact").then(t=>t.json()).then(t=>{this.results=t&&t.items||[]})}render(){return s("div",null,s("div",{class:"list"},results.map(t=>s(StyledResult,null,s(e,{result:t})))))}};export{r as fetch_example};

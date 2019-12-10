@@ -1,1 +1,1 @@
-import{p as t,b as d}from"./p-e490d5ed.js";t().then(t=>d([["p-dv5ahblb",[[6,"my-component",{first:[1],middle:[1],last:[1],count:[2],counter:[32],date:[32]}]]]],t));
+import{p as e,b as s}from"./p-7523777f.js";e().then(e=>s([["p-xk1evo9d",[[0,"fetch-example",{q:[1],results:[32]}],[2,"scoped-example",{first:[1],last:[1]}],[1,"shadow-example",{first:[1],last:[1]}],[4,"slot-example",{first:[1],last:[1]}],[6,"slot-scoped-example"],[1,"slot-shadow-example"]]],["p-qpul2ln1",[[6,"my-component",{first:[1],middle:[1],last:[1],count:[2],counter:[32],date:[32]}]]]],e));

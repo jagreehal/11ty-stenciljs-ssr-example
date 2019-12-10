@@ -1,0 +1,1 @@
+import{r as t,h as e}from"./p-2e895d0d.js";const s=class{constructor(e){t(this,e),this.results=[]}componentDidMount(){fetch("//api.github.com/search/repositories?q=preact").then(t=>t.json()).then(t=>{this.results=t&&t.items||[]})}render(){return e("div",null,"Hello, my name is ",this.first," ",this.last)}};export{s as fetch_example};
