@@ -6,10 +6,10 @@
     "scripts": {
         "start": "run-p watch serve",
         "serve": "eleventy --serve --quiet",
-        "build": "NODE_ENV=production postcss src/tailwind.css -o static/index.css && eleventy build",
+        "build": "NODE_ENV=production postcss src/tailwind.css -o static/index.css && eleventy build --pathprefix=\"/11ty-stenciljs-ssr-example/\"",
         "watch": "postcss src/tailwind.css -o static/index.css --watch"
     },
-    "devDependencies": {    
+    "devDependencies": {
         "@11ty/eleventy": "^0.9.0",
         "@fullhuman/postcss-purgecss": "^1.3.0",
         "autoprefixer": "^9.7.3",

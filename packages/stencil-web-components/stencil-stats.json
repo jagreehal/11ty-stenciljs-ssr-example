@@ -1,13 +1,13 @@
 {
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.8.1"
+    "version": "1.8.2"
   },
   "app": {
     "namespace": "StencilWebComponents",
     "fsNamespace": "stencil-web-components",
-    "components": 1,
-    "entries": 1,
+    "components": 7,
+    "entries": 2,
     "bundles": 0
   },
   "options": {
@@ -19,12 +19,94 @@
   },
   "components": [
     {
+      "tag": "fetch-example",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "scoped-example",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "shadow-example",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "slot-example",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "slot-scoped-example",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "slot-shadow-example",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
       "tag": "my-component",
       "dependencyOf": [],
       "dependencies": []
     }
   ],
   "entries": [
+    {
+      "entryId": "fetch-example.scoped-example.shadow-example.slot-example.slot-scoped-example.slot-shadow-example.entry",
+      "components": [
+        {
+          "tag": "fetch-example",
+          "dependencyOf": [],
+          "dependencies": []
+        },
+        {
+          "tag": "scoped-example",
+          "dependencyOf": [],
+          "dependencies": []
+        },
+        {
+          "tag": "shadow-example",
+          "dependencyOf": [],
+          "dependencies": []
+        },
+        {
+          "tag": "slot-example",
+          "dependencyOf": [],
+          "dependencies": []
+        },
+        {
+          "tag": "slot-scoped-example",
+          "dependencyOf": [],
+          "dependencies": []
+        },
+        {
+          "tag": "slot-shadow-example",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/fetch-example/fetch-example.tsx",
+        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/scoped-example/scoped-example.tsx",
+        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/shadow-example/shadow-example.tsx",
+        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-example/slot-example.tsx",
+        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-scoped-example/slot-scoped-example.tsx",
+        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-shadow-example/slot-shadow-example.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "none",
+        "scoped",
+        "shadow"
+      ]
+    },
     {
       "entryId": "my-component.entry",
       "components": [
@@ -47,7 +129,13 @@
     }
   ],
   "sourceGraph": {
-    "src/components/my-component/my-component.tsx": []
+    "src/components/fetch-example/fetch-example.tsx": [],
+    "src/components/my-component/my-component.tsx": [],
+    "src/components/scoped-example/scoped-example.tsx": [],
+    "src/components/shadow-example/shadow-example.tsx": [],
+    "src/components/slot-example/slot-example.tsx": [],
+    "src/components/slot-scoped-example/slot-scoped-example.tsx": [],
+    "src/components/slot-shadow-example/slot-shadow-example.tsx": []
   },
   "collections": []
 }

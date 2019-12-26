@@ -6,6 +6,9 @@
   "scripts": {
     "prepublish": "cd packages/eleventy-site && npm run build",
     "publish": "gh-pages -d packages/eleventy-site/_site",
+    "install": "run-p install:*",
+    "install:11ty": "cd packages/eleventy-site && npm install",
+    "install:stencil-web-components": "cd packages/stencil-web-components && npm install",
     "start": "run-p start:*",
     "start:11ty": "cd packages/eleventy-site && npm start",
     "start:stencil-web-components": "cd packages/stencil-web-components && npm start"
