@@ -74,7 +74,7 @@ if (typeof document.baseURI !== 'string') {
     configurable: true,
     get: function () {
       var base = document.querySelector('base');
-      if (base) {
+      if (base && base.href) {
         return base.href;
       }
       return document.URL;
@@ -864,7 +864,7 @@ if (!win.__stencil_cssshim && needsShim()) {
 
     var resourcesUrl = scriptElm ? scriptElm.getAttribute('data-resources-url') || scriptElm.src : '';
     var start = function() {
-      var url = new URL('./p-fc11300e.system.js', resourcesUrl);
+      var url = new URL('./p-bc207a2a.system.js', resourcesUrl);
       System.import(url.href);
     };
 
