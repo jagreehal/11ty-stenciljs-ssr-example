@@ -4,7 +4,7 @@ import { Component, Prop, h, Event, EventEmitter, State } from "@stencil/core";
   tag: "my-component",
   styleUrl: "my-component.css",
   scoped: true,
-  shadow: false
+  shadow: false,
 })
 export class MyComponent {
   /**

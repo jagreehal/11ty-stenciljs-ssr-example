@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h2 class="text-gray-800">This page shows various stencil server rendered web component</h2>
+<h2 class="text-gray-800">This page shows various stencil server rendered web components</h2>
 <h4>slot-example</h4>
 <slot-example>-SLOT CONTENT-</slot-example>
 <hr />

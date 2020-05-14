@@ -1,3 +1,3 @@
 module.exports = {
-  url: process.env.URL || "http://localhost:8080",
+  url: process.env.URL,
 };

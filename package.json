@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepublish": "npm run build",
     "publish": "gh-pages -d packages/eleventy-site/_site",    
-    "build": "URL=https://jagreehal.github.io/11ty-stenciljs-ssr-example npm run build:stencil-web-components && npm run build:11ty",
+    "build": "npm run build:stencil-web-components && npm run build:11ty",
     "build:11ty": "cd packages/eleventy-site && npm run build",
     "build:stencil-web-components": "cd packages/stencil-web-components && npm run build",
     "start": "run-p start:*",
@@ -19,7 +18,8 @@
   "private": true,
   "devDependencies": {
     "gh-pages": "^2.2.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5"
   },
   "workspaces": {
     "packages": [

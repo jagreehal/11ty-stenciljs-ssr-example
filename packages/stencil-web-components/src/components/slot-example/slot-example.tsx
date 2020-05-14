@@ -1,7 +1,7 @@
 import { Component, Prop, h } from "@stencil/core";
 
 @Component({
-  tag: "slot-example"
+  tag: "slot-example",
 })
 export class SlotExample {
   @Prop() first: string;

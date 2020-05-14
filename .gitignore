@@ -61,6 +61,7 @@ _site
 dist
 loader
 www
+packages/eleventy-site/static/stencil-web-components
 
 # Mac files
 .DS_Store

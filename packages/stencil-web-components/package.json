@@ -5,8 +5,11 @@
   "description": "Stencil Web Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
   "files": [
     "dist/",
     "loader/",
@@ -18,7 +21,7 @@
     "deploy": "surge dist",
     "build": "NODE_ENV=production stencil build --stats",
     "lint": "tslint -p tsconfig.json -c tslint.json",
-    "start": "stencil build --watch --serve",
+    "start": "stencil build --dev --watch --serve",
     "storybook": "start-storybook -p 9006 -s dist",
     "stylelint:fix": "stylelint --fix \"src/**/*.css\"",
     "test": "stencil test --spec --e2e --screenshot --headless",
@@ -31,18 +34,18 @@
   "author": "Jag Reehal",
   "license": "ISC",
   "dependencies": {
-    "@stencil/core": "1.13.0"
+    "@stencil/core": "^1.13.0"
   },
   "devDependencies": {
-    "@stencil/eslint-plugin": "0.3.1",
-    "@types/jest": "25.2.2",
-    "@typescript-eslint/parser": "2.33.0",
+    "@stencil/eslint-plugin": "^0.3.1",
+    "@types/jest": "^25.2.2",
+    "@typescript-eslint/parser": "^2.33.0",
     "@types/node": "^14.0.1",
     "@types/prettier": "^2.0.0",
     "@types/puppeteer": "^2.1.0",
     "autoprefixer": "^9.7.6",
-    "jest": "26.0.1",
-    "jest-cli": "26.0.1",
+    "jest": "^26.0.1",
+    "jest-cli": "^26.0.1",
     "prettier": "^2.0.5",
     "typescript": "^3.9.2"
   },
