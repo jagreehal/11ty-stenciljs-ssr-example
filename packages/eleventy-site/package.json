@@ -7,7 +7,7 @@
         "start": "run-p watch serve",
         "serve": "URL=http://localhost:8080 eleventy --serve",        
         "build": "NODE_ENV=production npm run build:css && npm run build:eleventy",
-        "build:eleventy": "NODE_ENV=production URL=https://jagreehal.github.io/11ty-stenciljs-ssr-examplezzz eleventy",
+        "build:eleventy": "NODE_ENV=production URL=https://jagreehal.github.io/11ty-stenciljs-ssr-example eleventy",
         "build:css": "postcss src/tailwind.css -o static/index.css",
         "watch": "postcss src/tailwind.css -o static/index.css --watch"
     },
