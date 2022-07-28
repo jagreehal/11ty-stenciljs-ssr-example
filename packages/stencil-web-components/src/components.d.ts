@@ -44,6 +44,10 @@ export namespace Components {
     interface SlotShadowExample {
     }
 }
+export interface MyComponentCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMyComponentElement;
+}
 declare global {
     interface HTMLFetchExampleElement extends Components.FetchExample, HTMLStencilElement {
     }
@@ -118,7 +122,7 @@ declare namespace LocalJSX {
           * The middle name
          */
         "middle"?: string;
-        "onEvent"?: (event: CustomEvent<number>) => void;
+        "onEvent"?: (event: MyComponentCustomEvent<number>) => void;
     }
     interface ScopedExample {
         "first"?: string;

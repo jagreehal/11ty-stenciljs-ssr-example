@@ -65,7 +65,7 @@ export class MyComponent {
     console.log("did update");
   }
 
-  componentDidUnload() {
+  disconnectedCallback() {
     console.log("has been removed from the DOM");
     clearInterval(this.timerID);
   }

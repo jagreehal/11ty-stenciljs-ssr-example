@@ -1,10 +1,14 @@
 const htmlmin = require("html-minifier");
 const cpx = require("cpx");
-const { renderToString } = require("stencil-web-components/hydrate");
+const { renderToString } = require("stencil-web-components/dist/hydrate");
 
 const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = function (config) {
+  config.setLiquidOptions({
+    dynamicPartials: false,
+    strictFilters: false,
+  });
   config.addPassthroughCopy("static");
   if (isProduction) {
     config.addPassthroughCopy({

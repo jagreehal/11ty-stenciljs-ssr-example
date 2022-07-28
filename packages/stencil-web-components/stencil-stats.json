@@ -1,141 +1,1608 @@
 {
+  "timestamp": "2022-07-28T18:07:54",
   "compiler": {
-    "name": "@stencil/core",
-    "version": "1.8.2"
+    "name": "node",
+    "version": "16.14.2"
   },
   "app": {
     "namespace": "StencilWebComponents",
     "fsNamespace": "stencil-web-components",
     "components": 7,
-    "entries": 2,
-    "bundles": 0
+    "entries": 7,
+    "bundles": 34,
+    "outputs": [
+      {
+        "name": "dist-collection",
+        "files": 7,
+        "generatedFiles": [
+          "./dist/collection/components/fetch-example/fetch-example.js",
+          "./dist/collection/components/my-component/my-component.js",
+          "./dist/collection/components/scoped-example/scoped-example.js",
+          "./dist/collection/components/shadow-example/shadow-example.js",
+          "./dist/collection/components/slot-example/slot-example.js",
+          "./dist/collection/components/slot-scoped-example/slot-scoped-example.js",
+          "./dist/collection/components/slot-shadow-example/slot-shadow-example.js"
+        ]
+      },
+      {
+        "name": "dist-lazy",
+        "files": 24,
+        "generatedFiles": [
+          "./dist/cjs/fetch-example_6.cjs.entry.js",
+          "./dist/cjs/index-f535bf26.js",
+          "./dist/cjs/index.cjs.js",
+          "./dist/cjs/loader.cjs.js",
+          "./dist/cjs/my-component.cjs.entry.js",
+          "./dist/cjs/stencil-web-components.cjs.js",
+          "./dist/esm/fetch-example_6.entry.js",
+          "./dist/esm/index-a7d83fca.js",
+          "./dist/esm/index.js",
+          "./dist/esm/loader.js",
+          "./dist/esm/my-component.entry.js",
+          "./dist/esm/stencil-web-components.js",
+          "./dist/index.cjs.js",
+          "./dist/index.js",
+          "./dist/stencil-web-components/index.esm.js",
+          "./dist/stencil-web-components/p-995c57e2.entry.js",
+          "./dist/stencil-web-components/p-b5743dcf.js",
+          "./dist/stencil-web-components/p-f5f78285.entry.js",
+          "./dist/stencil-web-components/stencil-web-components.esm.js",
+          "./www/build/index.esm.js",
+          "./www/build/p-995c57e2.entry.js",
+          "./www/build/p-b5743dcf.js",
+          "./www/build/p-f5f78285.entry.js",
+          "./www/build/stencil-web-components.esm.js"
+        ]
+      },
+      {
+        "name": "dist-types",
+        "files": 1,
+        "generatedFiles": [
+          "./dist/types/stencil-public-runtime.d.ts"
+        ]
+      },
+      {
+        "name": "www",
+        "files": 2,
+        "generatedFiles": [
+          "./www/host.config.json",
+          "./www/index.html"
+        ]
+      }
+    ]
   },
   "options": {
     "minifyJs": true,
     "minifyCss": true,
     "hashFileNames": true,
     "hashedFileNameLength": 8,
-    "buildEs5": true
+    "buildEs5": false
+  },
+  "formats": {
+    "esmBrowser": [
+      {
+        "key": "fetch-example.scoped-example.shadow-example.slot-example.slot-scoped-example.slot-shadow-example.entry",
+        "components": [
+          "fetch-example",
+          "scoped-example",
+          "shadow-example",
+          "slot-example",
+          "slot-scoped-example",
+          "slot-shadow-example"
+        ],
+        "bundleId": "p-f5f78285",
+        "fileName": "p-f5f78285.entry.js",
+        "imports": [
+          "p-b5743dcf.js"
+        ],
+        "originalByteSize": 2653
+      },
+      {
+        "key": "my-component.entry",
+        "components": [
+          "my-component"
+        ],
+        "bundleId": "p-995c57e2",
+        "fileName": "p-995c57e2.entry.js",
+        "imports": [
+          "p-b5743dcf.js"
+        ],
+        "originalByteSize": 1517
+      }
+    ],
+    "esm": [
+      {
+        "key": "fetch-example.scoped-example.shadow-example.slot-example.slot-scoped-example.slot-shadow-example.entry",
+        "components": [
+          "fetch-example",
+          "scoped-example",
+          "shadow-example",
+          "slot-example",
+          "slot-scoped-example",
+          "slot-shadow-example"
+        ],
+        "bundleId": "fetch-example_6",
+        "fileName": "fetch-example_6.entry.js",
+        "imports": [
+          "index-a7d83fca.js"
+        ],
+        "originalByteSize": 2657
+      },
+      {
+        "key": "my-component.entry",
+        "components": [
+          "my-component"
+        ],
+        "bundleId": "my-component",
+        "fileName": "my-component.entry.js",
+        "imports": [
+          "index-a7d83fca.js"
+        ],
+        "originalByteSize": 1521
+      }
+    ],
+    "es5": [],
+    "system": [],
+    "commonjs": [
+      {
+        "key": "fetch-example.scoped-example.shadow-example.slot-example.slot-scoped-example.slot-shadow-example.entry",
+        "components": [
+          "fetch-example",
+          "scoped-example",
+          "shadow-example",
+          "slot-example",
+          "slot-scoped-example",
+          "slot-shadow-example"
+        ],
+        "bundleId": "fetch-example_6.cjs",
+        "fileName": "fetch-example_6.cjs.entry.js",
+        "imports": [
+          "index-f535bf26.js"
+        ],
+        "originalByteSize": 2918
+      },
+      {
+        "key": "my-component.entry",
+        "components": [
+          "my-component"
+        ],
+        "bundleId": "my-component.cjs",
+        "fileName": "my-component.cjs.entry.js",
+        "imports": [
+          "index-f535bf26.js"
+        ],
+        "originalByteSize": 1608
+      }
+    ]
   },
   "components": [
     {
       "tag": "fetch-example",
-      "dependencyOf": [],
-      "dependencies": []
-    },
-    {
-      "tag": "scoped-example",
-      "dependencyOf": [],
-      "dependencies": []
-    },
-    {
-      "tag": "shadow-example",
-      "dependencyOf": [],
-      "dependencies": []
-    },
-    {
-      "tag": "slot-example",
-      "dependencyOf": [],
-      "dependencies": []
-    },
-    {
-      "tag": "slot-scoped-example",
-      "dependencyOf": [],
-      "dependencies": []
-    },
-    {
-      "tag": "slot-shadow-example",
-      "dependencyOf": [],
-      "dependencies": []
+      "path": "./src/components/fetch-example/fetch-example.js",
+      "source": "./src/components/fetch-example/fetch-example.tsx",
+      "elementRef": null,
+      "componentClassName": "FetchExample",
+      "assetsDirs": [],
+      "dependencies": [],
+      "dependents": [],
+      "directDependencies": [],
+      "directDependents": [],
+      "docs": {
+        "tags": [],
+        "text": ""
+      },
+      "encapsulation": "none",
+      "excludeFromCollection": false,
+      "events": [],
+      "internal": false,
+      "legacyConnect": [],
+      "legacyContext": [],
+      "listeners": [],
+      "methods": [],
+      "potentialCmpRefs": [],
+      "properties": [
+        {
+          "name": "q",
+          "type": "string",
+          "attribute": "q",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "defaultValue": "\"stencil\"",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "internal": false
+        }
+      ],
+      "shadowDelegatesFocus": null,
+      "states": [
+        {
+          "name": "results"
+        }
+      ]
     },
     {
       "tag": "my-component",
-      "dependencyOf": [],
-      "dependencies": []
+      "path": "./src/components/my-component/my-component.js",
+      "source": "./src/components/my-component/my-component.tsx",
+      "elementRef": null,
+      "componentClassName": "MyComponent",
+      "assetsDirs": [],
+      "dependencies": [],
+      "dependents": [],
+      "directDependencies": [],
+      "directDependents": [],
+      "docs": {
+        "tags": [],
+        "text": ""
+      },
+      "encapsulation": "scoped",
+      "excludeFromCollection": false,
+      "events": [
+        {
+          "name": "event",
+          "method": "event",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "complexType": {
+            "original": "number",
+            "resolved": "number",
+            "references": {}
+          },
+          "internal": false
+        }
+      ],
+      "internal": false,
+      "legacyConnect": [],
+      "legacyContext": [],
+      "listeners": [],
+      "methods": [],
+      "potentialCmpRefs": [],
+      "properties": [
+        {
+          "name": "first",
+          "type": "string",
+          "attribute": "first",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": "The first name (doc from the component)"
+          },
+          "internal": false
+        },
+        {
+          "name": "middle",
+          "type": "string",
+          "attribute": "middle",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": "The middle name"
+          },
+          "internal": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "attribute": "last",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": "The lastish name"
+          },
+          "internal": false
+        },
+        {
+          "name": "count",
+          "type": "number",
+          "attribute": "count",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": true,
+          "defaultValue": "0",
+          "complexType": {
+            "original": "number",
+            "resolved": "number",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": "The count value"
+          },
+          "internal": false
+        }
+      ],
+      "shadowDelegatesFocus": null,
+      "states": [
+        {
+          "name": "counter"
+        },
+        {
+          "name": "date"
+        }
+      ]
+    },
+    {
+      "tag": "scoped-example",
+      "path": "./src/components/scoped-example/scoped-example.js",
+      "source": "./src/components/scoped-example/scoped-example.tsx",
+      "elementRef": null,
+      "componentClassName": "ScopedExample",
+      "assetsDirs": [],
+      "dependencies": [],
+      "dependents": [],
+      "directDependencies": [],
+      "directDependents": [],
+      "docs": {
+        "tags": [],
+        "text": ""
+      },
+      "encapsulation": "scoped",
+      "excludeFromCollection": false,
+      "events": [],
+      "internal": false,
+      "legacyConnect": [],
+      "legacyContext": [],
+      "listeners": [],
+      "methods": [],
+      "potentialCmpRefs": [],
+      "properties": [
+        {
+          "name": "first",
+          "type": "string",
+          "attribute": "first",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "internal": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "attribute": "last",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "internal": false
+        }
+      ],
+      "shadowDelegatesFocus": null,
+      "states": []
+    },
+    {
+      "tag": "shadow-example",
+      "path": "./src/components/shadow-example/shadow-example.js",
+      "source": "./src/components/shadow-example/shadow-example.tsx",
+      "elementRef": null,
+      "componentClassName": "ShadowExample",
+      "assetsDirs": [],
+      "dependencies": [],
+      "dependents": [],
+      "directDependencies": [],
+      "directDependents": [],
+      "docs": {
+        "tags": [],
+        "text": ""
+      },
+      "encapsulation": "shadow",
+      "excludeFromCollection": false,
+      "events": [],
+      "internal": false,
+      "legacyConnect": [],
+      "legacyContext": [],
+      "listeners": [],
+      "methods": [],
+      "potentialCmpRefs": [],
+      "properties": [
+        {
+          "name": "first",
+          "type": "string",
+          "attribute": "first",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "internal": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "attribute": "last",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "internal": false
+        }
+      ],
+      "shadowDelegatesFocus": false,
+      "states": []
+    },
+    {
+      "tag": "slot-example",
+      "path": "./src/components/slot-example/slot-example.js",
+      "source": "./src/components/slot-example/slot-example.tsx",
+      "elementRef": null,
+      "componentClassName": "SlotExample",
+      "assetsDirs": [],
+      "dependencies": [],
+      "dependents": [],
+      "directDependencies": [],
+      "directDependents": [],
+      "docs": {
+        "tags": [],
+        "text": ""
+      },
+      "encapsulation": "none",
+      "excludeFromCollection": false,
+      "events": [],
+      "internal": false,
+      "legacyConnect": [],
+      "legacyContext": [],
+      "listeners": [],
+      "methods": [],
+      "potentialCmpRefs": [],
+      "properties": [
+        {
+          "name": "first",
+          "type": "string",
+          "attribute": "first",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "internal": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "attribute": "last",
+          "reflect": false,
+          "mutable": false,
+          "required": false,
+          "optional": false,
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "internal": false
+        }
+      ],
+      "shadowDelegatesFocus": null,
+      "states": []
+    },
+    {
+      "tag": "slot-scoped-example",
+      "path": "./src/components/slot-scoped-example/slot-scoped-example.js",
+      "source": "./src/components/slot-scoped-example/slot-scoped-example.tsx",
+      "elementRef": null,
+      "componentClassName": "SlotScopedExample",
+      "assetsDirs": [],
+      "dependencies": [],
+      "dependents": [],
+      "directDependencies": [],
+      "directDependents": [],
+      "docs": {
+        "tags": [],
+        "text": ""
+      },
+      "encapsulation": "scoped",
+      "excludeFromCollection": false,
+      "events": [],
+      "internal": false,
+      "legacyConnect": [],
+      "legacyContext": [],
+      "listeners": [],
+      "methods": [],
+      "potentialCmpRefs": [],
+      "properties": [],
+      "shadowDelegatesFocus": null,
+      "states": []
+    },
+    {
+      "tag": "slot-shadow-example",
+      "path": "./src/components/slot-shadow-example/slot-shadow-example.js",
+      "source": "./src/components/slot-shadow-example/slot-shadow-example.tsx",
+      "elementRef": null,
+      "componentClassName": "SlotShadowExample",
+      "assetsDirs": [],
+      "dependencies": [],
+      "dependents": [],
+      "directDependencies": [],
+      "directDependents": [],
+      "docs": {
+        "tags": [],
+        "text": ""
+      },
+      "encapsulation": "shadow",
+      "excludeFromCollection": false,
+      "events": [],
+      "internal": false,
+      "legacyConnect": [],
+      "legacyContext": [],
+      "listeners": [],
+      "methods": [],
+      "potentialCmpRefs": [],
+      "properties": [],
+      "shadowDelegatesFocus": false,
+      "states": []
     }
   ],
   "entries": [
     {
-      "entryId": "fetch-example.scoped-example.shadow-example.slot-example.slot-scoped-example.slot-shadow-example.entry",
-      "components": [
+      "cmps": [
         {
-          "tag": "fetch-example",
-          "dependencyOf": [],
-          "dependencies": []
+          "tagName": "fetch-example",
+          "excludeFromCollection": false,
+          "isCollectionDependency": false,
+          "componentClassName": "FetchExample",
+          "elementRef": null,
+          "encapsulation": "none",
+          "shadowDelegatesFocus": null,
+          "properties": [
+            {
+              "name": "q",
+              "type": "string",
+              "attribute": "q",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "defaultValue": "\"stencil\"",
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": ""
+              },
+              "internal": false
+            }
+          ],
+          "virtualProperties": [],
+          "states": [
+            {
+              "name": "results"
+            }
+          ],
+          "methods": [],
+          "listeners": [],
+          "events": [],
+          "watchers": [],
+          "styles": [],
+          "legacyConnect": [],
+          "legacyContext": [],
+          "internal": false,
+          "assetsDirs": [],
+          "styleDocs": [],
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "jsFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/fetch-example/fetch-example.js",
+          "sourceFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/fetch-example/fetch-example.tsx",
+          "sourceMapPath": null,
+          "hasAttributeChangedCallbackFn": false,
+          "hasComponentWillLoadFn": false,
+          "hasComponentDidLoadFn": true,
+          "hasComponentShouldUpdateFn": false,
+          "hasComponentWillUpdateFn": false,
+          "hasComponentDidUpdateFn": false,
+          "hasComponentWillRenderFn": false,
+          "hasComponentDidRenderFn": false,
+          "hasComponentDidUnloadFn": false,
+          "hasConnectedCallbackFn": false,
+          "hasDisconnectedCallbackFn": false,
+          "hasElement": false,
+          "hasEvent": false,
+          "hasLifecycle": true,
+          "hasListener": false,
+          "hasListenerTarget": false,
+          "hasListenerTargetWindow": false,
+          "hasListenerTargetDocument": false,
+          "hasListenerTargetBody": false,
+          "hasListenerTargetParent": false,
+          "hasMember": true,
+          "hasMethod": false,
+          "hasMode": false,
+          "hasAttribute": true,
+          "hasProp": true,
+          "hasPropNumber": false,
+          "hasPropBoolean": false,
+          "hasPropString": true,
+          "hasPropMutable": false,
+          "hasReflect": false,
+          "hasRenderFn": true,
+          "hasState": true,
+          "hasStyle": false,
+          "hasVdomAttribute": true,
+          "hasVdomXlink": false,
+          "hasVdomClass": true,
+          "hasVdomFunctional": true,
+          "hasVdomKey": false,
+          "hasVdomListener": false,
+          "hasVdomPropOrAttr": true,
+          "hasVdomRef": false,
+          "hasVdomRender": true,
+          "hasVdomStyle": false,
+          "hasVdomText": true,
+          "hasWatchCallback": false,
+          "isPlain": false,
+          "htmlAttrNames": [
+            "class",
+            "result",
+            "href",
+            "target"
+          ],
+          "htmlTagNames": [
+            "div",
+            "a",
+            "strong",
+            "p"
+          ],
+          "htmlParts": [],
+          "isUpdateable": true,
+          "potentialCmpRefs": [],
+          "directDependencies": [],
+          "dependencies": [],
+          "dependents": [],
+          "directDependents": []
         },
         {
-          "tag": "scoped-example",
-          "dependencyOf": [],
-          "dependencies": []
+          "tagName": "scoped-example",
+          "excludeFromCollection": false,
+          "isCollectionDependency": false,
+          "componentClassName": "ScopedExample",
+          "elementRef": null,
+          "encapsulation": "scoped",
+          "shadowDelegatesFocus": null,
+          "properties": [
+            {
+              "name": "first",
+              "type": "string",
+              "attribute": "first",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": ""
+              },
+              "internal": false
+            },
+            {
+              "name": "last",
+              "type": "string",
+              "attribute": "last",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": ""
+              },
+              "internal": false
+            }
+          ],
+          "virtualProperties": [],
+          "states": [],
+          "methods": [],
+          "listeners": [],
+          "events": [],
+          "watchers": [],
+          "styles": [
+            {
+              "modeName": "$",
+              "styleId": "SCOPED-EXAMPLE",
+              "styleStr": null,
+              "styleIdentifier": "scopedExampleStyle",
+              "externalStyles": [
+                {
+                  "absolutePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/scoped-example/scoped-example.css",
+                  "relativePath": "scoped-example.css",
+                  "originalComponentPath": "scoped-example.css"
+                }
+              ]
+            }
+          ],
+          "legacyConnect": [],
+          "legacyContext": [],
+          "internal": false,
+          "assetsDirs": [],
+          "styleDocs": [],
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "jsFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/scoped-example/scoped-example.js",
+          "sourceFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/scoped-example/scoped-example.tsx",
+          "sourceMapPath": null,
+          "hasAttributeChangedCallbackFn": false,
+          "hasComponentWillLoadFn": false,
+          "hasComponentDidLoadFn": false,
+          "hasComponentShouldUpdateFn": false,
+          "hasComponentWillUpdateFn": false,
+          "hasComponentDidUpdateFn": false,
+          "hasComponentWillRenderFn": false,
+          "hasComponentDidRenderFn": false,
+          "hasComponentDidUnloadFn": false,
+          "hasConnectedCallbackFn": false,
+          "hasDisconnectedCallbackFn": false,
+          "hasElement": false,
+          "hasEvent": false,
+          "hasLifecycle": false,
+          "hasListener": false,
+          "hasListenerTarget": false,
+          "hasListenerTargetWindow": false,
+          "hasListenerTargetDocument": false,
+          "hasListenerTargetBody": false,
+          "hasListenerTargetParent": false,
+          "hasMember": true,
+          "hasMethod": false,
+          "hasMode": false,
+          "hasAttribute": true,
+          "hasProp": true,
+          "hasPropNumber": false,
+          "hasPropBoolean": false,
+          "hasPropString": true,
+          "hasPropMutable": false,
+          "hasReflect": false,
+          "hasRenderFn": true,
+          "hasState": false,
+          "hasStyle": true,
+          "hasVdomAttribute": true,
+          "hasVdomXlink": false,
+          "hasVdomClass": true,
+          "hasVdomFunctional": false,
+          "hasVdomKey": false,
+          "hasVdomListener": false,
+          "hasVdomPropOrAttr": false,
+          "hasVdomRef": false,
+          "hasVdomRender": true,
+          "hasVdomStyle": false,
+          "hasVdomText": true,
+          "hasWatchCallback": false,
+          "isPlain": false,
+          "htmlAttrNames": [
+            "class"
+          ],
+          "htmlTagNames": [
+            "div"
+          ],
+          "htmlParts": [],
+          "isUpdateable": true,
+          "potentialCmpRefs": [],
+          "directDependencies": [],
+          "dependencies": [],
+          "dependents": [],
+          "directDependents": []
         },
         {
-          "tag": "shadow-example",
-          "dependencyOf": [],
-          "dependencies": []
+          "tagName": "shadow-example",
+          "excludeFromCollection": false,
+          "isCollectionDependency": false,
+          "componentClassName": "ShadowExample",
+          "elementRef": null,
+          "encapsulation": "shadow",
+          "shadowDelegatesFocus": false,
+          "properties": [
+            {
+              "name": "first",
+              "type": "string",
+              "attribute": "first",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": ""
+              },
+              "internal": false
+            },
+            {
+              "name": "last",
+              "type": "string",
+              "attribute": "last",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": ""
+              },
+              "internal": false
+            }
+          ],
+          "virtualProperties": [],
+          "states": [],
+          "methods": [],
+          "listeners": [],
+          "events": [],
+          "watchers": [],
+          "styles": [
+            {
+              "modeName": "$",
+              "styleId": "SHADOW-EXAMPLE",
+              "styleStr": null,
+              "styleIdentifier": "shadowExampleStyle",
+              "externalStyles": [
+                {
+                  "absolutePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/shadow-example/shadow-example.css",
+                  "relativePath": "shadow-example.css",
+                  "originalComponentPath": "shadow-example.css"
+                }
+              ]
+            }
+          ],
+          "legacyConnect": [],
+          "legacyContext": [],
+          "internal": false,
+          "assetsDirs": [],
+          "styleDocs": [],
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "jsFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/shadow-example/shadow-example.js",
+          "sourceFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/shadow-example/shadow-example.tsx",
+          "sourceMapPath": null,
+          "hasAttributeChangedCallbackFn": false,
+          "hasComponentWillLoadFn": false,
+          "hasComponentDidLoadFn": false,
+          "hasComponentShouldUpdateFn": false,
+          "hasComponentWillUpdateFn": false,
+          "hasComponentDidUpdateFn": false,
+          "hasComponentWillRenderFn": false,
+          "hasComponentDidRenderFn": false,
+          "hasComponentDidUnloadFn": false,
+          "hasConnectedCallbackFn": false,
+          "hasDisconnectedCallbackFn": false,
+          "hasElement": false,
+          "hasEvent": false,
+          "hasLifecycle": false,
+          "hasListener": false,
+          "hasListenerTarget": false,
+          "hasListenerTargetWindow": false,
+          "hasListenerTargetDocument": false,
+          "hasListenerTargetBody": false,
+          "hasListenerTargetParent": false,
+          "hasMember": true,
+          "hasMethod": false,
+          "hasMode": false,
+          "hasAttribute": true,
+          "hasProp": true,
+          "hasPropNumber": false,
+          "hasPropBoolean": false,
+          "hasPropString": true,
+          "hasPropMutable": false,
+          "hasReflect": false,
+          "hasRenderFn": true,
+          "hasState": false,
+          "hasStyle": true,
+          "hasVdomAttribute": true,
+          "hasVdomXlink": false,
+          "hasVdomClass": true,
+          "hasVdomFunctional": false,
+          "hasVdomKey": false,
+          "hasVdomListener": false,
+          "hasVdomPropOrAttr": false,
+          "hasVdomRef": false,
+          "hasVdomRender": true,
+          "hasVdomStyle": false,
+          "hasVdomText": true,
+          "hasWatchCallback": false,
+          "isPlain": false,
+          "htmlAttrNames": [
+            "class"
+          ],
+          "htmlTagNames": [
+            "div"
+          ],
+          "htmlParts": [],
+          "isUpdateable": true,
+          "potentialCmpRefs": [],
+          "directDependencies": [],
+          "dependencies": [],
+          "dependents": [],
+          "directDependents": []
         },
         {
-          "tag": "slot-example",
-          "dependencyOf": [],
-          "dependencies": []
+          "tagName": "slot-example",
+          "excludeFromCollection": false,
+          "isCollectionDependency": false,
+          "componentClassName": "SlotExample",
+          "elementRef": null,
+          "encapsulation": "none",
+          "shadowDelegatesFocus": null,
+          "properties": [
+            {
+              "name": "first",
+              "type": "string",
+              "attribute": "first",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": ""
+              },
+              "internal": false
+            },
+            {
+              "name": "last",
+              "type": "string",
+              "attribute": "last",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": ""
+              },
+              "internal": false
+            }
+          ],
+          "virtualProperties": [],
+          "states": [],
+          "methods": [],
+          "listeners": [],
+          "events": [],
+          "watchers": [],
+          "styles": [],
+          "legacyConnect": [],
+          "legacyContext": [],
+          "internal": false,
+          "assetsDirs": [],
+          "styleDocs": [],
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "jsFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-example/slot-example.js",
+          "sourceFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-example/slot-example.tsx",
+          "sourceMapPath": null,
+          "hasAttributeChangedCallbackFn": false,
+          "hasComponentWillLoadFn": false,
+          "hasComponentDidLoadFn": false,
+          "hasComponentShouldUpdateFn": false,
+          "hasComponentWillUpdateFn": false,
+          "hasComponentDidUpdateFn": false,
+          "hasComponentWillRenderFn": false,
+          "hasComponentDidRenderFn": false,
+          "hasComponentDidUnloadFn": false,
+          "hasConnectedCallbackFn": false,
+          "hasDisconnectedCallbackFn": false,
+          "hasElement": false,
+          "hasEvent": false,
+          "hasLifecycle": false,
+          "hasListener": false,
+          "hasListenerTarget": false,
+          "hasListenerTargetWindow": false,
+          "hasListenerTargetDocument": false,
+          "hasListenerTargetBody": false,
+          "hasListenerTargetParent": false,
+          "hasMember": true,
+          "hasMethod": false,
+          "hasMode": false,
+          "hasAttribute": true,
+          "hasProp": true,
+          "hasPropNumber": false,
+          "hasPropBoolean": false,
+          "hasPropString": true,
+          "hasPropMutable": false,
+          "hasReflect": false,
+          "hasRenderFn": true,
+          "hasState": false,
+          "hasStyle": false,
+          "hasVdomAttribute": false,
+          "hasVdomXlink": false,
+          "hasVdomClass": false,
+          "hasVdomFunctional": false,
+          "hasVdomKey": false,
+          "hasVdomListener": false,
+          "hasVdomPropOrAttr": false,
+          "hasVdomRef": false,
+          "hasVdomRender": true,
+          "hasVdomStyle": false,
+          "hasVdomText": true,
+          "hasWatchCallback": false,
+          "isPlain": false,
+          "htmlAttrNames": [],
+          "htmlTagNames": [
+            "div",
+            "slot"
+          ],
+          "htmlParts": [],
+          "isUpdateable": true,
+          "potentialCmpRefs": [],
+          "directDependencies": [],
+          "dependencies": [],
+          "dependents": [],
+          "directDependents": []
         },
         {
-          "tag": "slot-scoped-example",
-          "dependencyOf": [],
-          "dependencies": []
+          "tagName": "slot-scoped-example",
+          "excludeFromCollection": false,
+          "isCollectionDependency": false,
+          "componentClassName": "SlotScopedExample",
+          "elementRef": null,
+          "encapsulation": "scoped",
+          "shadowDelegatesFocus": null,
+          "properties": [],
+          "virtualProperties": [],
+          "states": [],
+          "methods": [],
+          "listeners": [],
+          "events": [],
+          "watchers": [],
+          "styles": [
+            {
+              "modeName": "$",
+              "styleId": "SLOT-SCOPED-EXAMPLE",
+              "styleStr": null,
+              "styleIdentifier": "slotScopedExampleStyle",
+              "externalStyles": [
+                {
+                  "absolutePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-scoped-example/slot-scoped-example.css",
+                  "relativePath": "slot-scoped-example.css",
+                  "originalComponentPath": "slot-scoped-example.css"
+                }
+              ]
+            }
+          ],
+          "legacyConnect": [],
+          "legacyContext": [],
+          "internal": false,
+          "assetsDirs": [],
+          "styleDocs": [],
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "jsFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-scoped-example/slot-scoped-example.js",
+          "sourceFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-scoped-example/slot-scoped-example.tsx",
+          "sourceMapPath": null,
+          "hasAttributeChangedCallbackFn": false,
+          "hasComponentWillLoadFn": false,
+          "hasComponentDidLoadFn": false,
+          "hasComponentShouldUpdateFn": false,
+          "hasComponentWillUpdateFn": false,
+          "hasComponentDidUpdateFn": false,
+          "hasComponentWillRenderFn": false,
+          "hasComponentDidRenderFn": false,
+          "hasComponentDidUnloadFn": false,
+          "hasConnectedCallbackFn": false,
+          "hasDisconnectedCallbackFn": false,
+          "hasElement": false,
+          "hasEvent": false,
+          "hasLifecycle": false,
+          "hasListener": false,
+          "hasListenerTarget": false,
+          "hasListenerTargetWindow": false,
+          "hasListenerTargetDocument": false,
+          "hasListenerTargetBody": false,
+          "hasListenerTargetParent": false,
+          "hasMember": false,
+          "hasMethod": false,
+          "hasMode": false,
+          "hasAttribute": false,
+          "hasProp": false,
+          "hasPropNumber": false,
+          "hasPropBoolean": false,
+          "hasPropString": false,
+          "hasPropMutable": false,
+          "hasReflect": false,
+          "hasRenderFn": true,
+          "hasState": false,
+          "hasStyle": true,
+          "hasVdomAttribute": true,
+          "hasVdomXlink": false,
+          "hasVdomClass": true,
+          "hasVdomFunctional": false,
+          "hasVdomKey": false,
+          "hasVdomListener": false,
+          "hasVdomPropOrAttr": false,
+          "hasVdomRef": false,
+          "hasVdomRender": true,
+          "hasVdomStyle": false,
+          "hasVdomText": true,
+          "hasWatchCallback": false,
+          "isPlain": false,
+          "htmlAttrNames": [
+            "class"
+          ],
+          "htmlTagNames": [
+            "div",
+            "slot"
+          ],
+          "htmlParts": [],
+          "isUpdateable": false,
+          "potentialCmpRefs": [],
+          "directDependencies": [],
+          "dependencies": [],
+          "dependents": [],
+          "directDependents": []
         },
         {
-          "tag": "slot-shadow-example",
-          "dependencyOf": [],
-          "dependencies": []
+          "tagName": "slot-shadow-example",
+          "excludeFromCollection": false,
+          "isCollectionDependency": false,
+          "componentClassName": "SlotShadowExample",
+          "elementRef": null,
+          "encapsulation": "shadow",
+          "shadowDelegatesFocus": false,
+          "properties": [],
+          "virtualProperties": [],
+          "states": [],
+          "methods": [],
+          "listeners": [],
+          "events": [],
+          "watchers": [],
+          "styles": [
+            {
+              "modeName": "$",
+              "styleId": "SLOT-SHADOW-EXAMPLE",
+              "styleStr": null,
+              "styleIdentifier": "slotShadowExampleStyle",
+              "externalStyles": [
+                {
+                  "absolutePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-shadow-example/slot-shadow-example.css",
+                  "relativePath": "slot-shadow-example.css",
+                  "originalComponentPath": "slot-shadow-example.css"
+                }
+              ]
+            }
+          ],
+          "legacyConnect": [],
+          "legacyContext": [],
+          "internal": false,
+          "assetsDirs": [],
+          "styleDocs": [],
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "jsFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-shadow-example/slot-shadow-example.js",
+          "sourceFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-shadow-example/slot-shadow-example.tsx",
+          "sourceMapPath": null,
+          "hasAttributeChangedCallbackFn": false,
+          "hasComponentWillLoadFn": false,
+          "hasComponentDidLoadFn": false,
+          "hasComponentShouldUpdateFn": false,
+          "hasComponentWillUpdateFn": false,
+          "hasComponentDidUpdateFn": false,
+          "hasComponentWillRenderFn": false,
+          "hasComponentDidRenderFn": false,
+          "hasComponentDidUnloadFn": false,
+          "hasConnectedCallbackFn": false,
+          "hasDisconnectedCallbackFn": false,
+          "hasElement": false,
+          "hasEvent": false,
+          "hasLifecycle": false,
+          "hasListener": false,
+          "hasListenerTarget": false,
+          "hasListenerTargetWindow": false,
+          "hasListenerTargetDocument": false,
+          "hasListenerTargetBody": false,
+          "hasListenerTargetParent": false,
+          "hasMember": false,
+          "hasMethod": false,
+          "hasMode": false,
+          "hasAttribute": false,
+          "hasProp": false,
+          "hasPropNumber": false,
+          "hasPropBoolean": false,
+          "hasPropString": false,
+          "hasPropMutable": false,
+          "hasReflect": false,
+          "hasRenderFn": true,
+          "hasState": false,
+          "hasStyle": true,
+          "hasVdomAttribute": true,
+          "hasVdomXlink": false,
+          "hasVdomClass": true,
+          "hasVdomFunctional": false,
+          "hasVdomKey": false,
+          "hasVdomListener": false,
+          "hasVdomPropOrAttr": false,
+          "hasVdomRef": false,
+          "hasVdomRender": true,
+          "hasVdomStyle": false,
+          "hasVdomText": true,
+          "hasWatchCallback": false,
+          "isPlain": false,
+          "htmlAttrNames": [
+            "class"
+          ],
+          "htmlTagNames": [
+            "div",
+            "slot"
+          ],
+          "htmlParts": [],
+          "isUpdateable": false,
+          "potentialCmpRefs": [],
+          "directDependencies": [],
+          "dependencies": [],
+          "dependents": [],
+          "directDependents": []
         }
       ],
-      "bundles": [],
-      "inputs": [
-        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/fetch-example/fetch-example.tsx",
-        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/scoped-example/scoped-example.tsx",
-        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/shadow-example/shadow-example.tsx",
-        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-example/slot-example.tsx",
-        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-scoped-example/slot-scoped-example.tsx",
-        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/slot-shadow-example/slot-shadow-example.tsx"
-      ],
-      "modes": [
-        "$"
-      ],
-      "encapsulations": [
-        "none",
-        "scoped",
-        "shadow"
-      ]
+      "entryKey": "fetch-example.scoped-example.shadow-example.slot-example.slot-scoped-example.slot-shadow-example.entry"
     },
     {
-      "entryId": "my-component.entry",
-      "components": [
+      "cmps": [
         {
-          "tag": "my-component",
-          "dependencyOf": [],
-          "dependencies": []
+          "tagName": "my-component",
+          "excludeFromCollection": false,
+          "isCollectionDependency": false,
+          "componentClassName": "MyComponent",
+          "elementRef": null,
+          "encapsulation": "scoped",
+          "shadowDelegatesFocus": null,
+          "properties": [
+            {
+              "name": "first",
+              "type": "string",
+              "attribute": "first",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": "The first name (doc from the component)"
+              },
+              "internal": false
+            },
+            {
+              "name": "middle",
+              "type": "string",
+              "attribute": "middle",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": "The middle name"
+              },
+              "internal": false
+            },
+            {
+              "name": "last",
+              "type": "string",
+              "attribute": "last",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": false,
+              "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": "The lastish name"
+              },
+              "internal": false
+            },
+            {
+              "name": "count",
+              "type": "number",
+              "attribute": "count",
+              "reflect": false,
+              "mutable": false,
+              "required": false,
+              "optional": true,
+              "defaultValue": "0",
+              "complexType": {
+                "original": "number",
+                "resolved": "number",
+                "references": {}
+              },
+              "docs": {
+                "tags": [],
+                "text": "The count value"
+              },
+              "internal": false
+            }
+          ],
+          "virtualProperties": [],
+          "states": [
+            {
+              "name": "counter"
+            },
+            {
+              "name": "date"
+            }
+          ],
+          "methods": [],
+          "listeners": [],
+          "events": [
+            {
+              "name": "event",
+              "method": "event",
+              "bubbles": true,
+              "cancelable": true,
+              "composed": true,
+              "docs": {
+                "tags": [],
+                "text": ""
+              },
+              "complexType": {
+                "original": "number",
+                "resolved": "number",
+                "references": {}
+              },
+              "internal": false
+            }
+          ],
+          "watchers": [],
+          "styles": [
+            {
+              "modeName": "$",
+              "styleId": "MY-COMPONENT",
+              "styleStr": null,
+              "styleIdentifier": "myComponentStyle",
+              "externalStyles": [
+                {
+                  "absolutePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/my-component/my-component.css",
+                  "relativePath": "my-component.css",
+                  "originalComponentPath": "my-component.css"
+                }
+              ]
+            }
+          ],
+          "legacyConnect": [],
+          "legacyContext": [],
+          "internal": false,
+          "assetsDirs": [],
+          "styleDocs": [],
+          "docs": {
+            "tags": [],
+            "text": ""
+          },
+          "jsFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/my-component/my-component.js",
+          "sourceFilePath": "/Users/jreehal/dev/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/my-component/my-component.tsx",
+          "sourceMapPath": null,
+          "hasAttributeChangedCallbackFn": false,
+          "hasComponentWillLoadFn": true,
+          "hasComponentDidLoadFn": true,
+          "hasComponentShouldUpdateFn": false,
+          "hasComponentWillUpdateFn": true,
+          "hasComponentDidUpdateFn": true,
+          "hasComponentWillRenderFn": false,
+          "hasComponentDidRenderFn": false,
+          "hasComponentDidUnloadFn": false,
+          "hasConnectedCallbackFn": false,
+          "hasDisconnectedCallbackFn": true,
+          "hasElement": false,
+          "hasEvent": true,
+          "hasLifecycle": true,
+          "hasListener": false,
+          "hasListenerTarget": false,
+          "hasListenerTargetWindow": false,
+          "hasListenerTargetDocument": false,
+          "hasListenerTargetBody": false,
+          "hasListenerTargetParent": false,
+          "hasMember": true,
+          "hasMethod": false,
+          "hasMode": false,
+          "hasAttribute": true,
+          "hasProp": true,
+          "hasPropNumber": true,
+          "hasPropBoolean": false,
+          "hasPropString": true,
+          "hasPropMutable": false,
+          "hasReflect": false,
+          "hasRenderFn": true,
+          "hasState": true,
+          "hasStyle": true,
+          "hasVdomAttribute": true,
+          "hasVdomXlink": false,
+          "hasVdomClass": true,
+          "hasVdomFunctional": false,
+          "hasVdomKey": false,
+          "hasVdomListener": true,
+          "hasVdomPropOrAttr": false,
+          "hasVdomRef": false,
+          "hasVdomRender": true,
+          "hasVdomStyle": false,
+          "hasVdomText": true,
+          "hasWatchCallback": false,
+          "isPlain": false,
+          "htmlAttrNames": [
+            "class",
+            "onClick"
+          ],
+          "htmlTagNames": [
+            "div",
+            "button",
+            "hr",
+            "slot"
+          ],
+          "htmlParts": [],
+          "isUpdateable": true,
+          "potentialCmpRefs": [],
+          "directDependencies": [],
+          "dependencies": [],
+          "dependents": [],
+          "directDependents": []
         }
       ],
-      "bundles": [],
-      "inputs": [
-        "/Users/jreehal/MEGA/js/s/11ty-stenciljs-ssr-example/packages/stencil-web-components/src/components/my-component/my-component.tsx"
-      ],
-      "modes": [
-        "$"
-      ],
-      "encapsulations": [
-        "scoped"
-      ]
+      "entryKey": "my-component.entry"
     }
   ],
+  "componentGraph": {
+    "sc-fetch-example": [
+      "p-b5743dcf.js"
+    ],
+    "sc-my-component": [
+      "p-b5743dcf.js"
+    ],
+    "sc-scoped-example": [
+      "p-b5743dcf.js"
+    ],
+    "sc-shadow-example": [
+      "p-b5743dcf.js"
+    ],
+    "sc-slot-example": [
+      "p-b5743dcf.js"
+    ],
+    "sc-slot-scoped-example": [
+      "p-b5743dcf.js"
+    ],
+    "sc-slot-shadow-example": [
+      "p-b5743dcf.js"
+    ]
+  },
   "sourceGraph": {
-    "src/components/fetch-example/fetch-example.tsx": [],
-    "src/components/my-component/my-component.tsx": [],
-    "src/components/scoped-example/scoped-example.tsx": [],
-    "src/components/shadow-example/shadow-example.tsx": [],
-    "src/components/slot-example/slot-example.tsx": [],
-    "src/components/slot-scoped-example/slot-scoped-example.tsx": [],
-    "src/components/slot-shadow-example/slot-shadow-example.tsx": []
+    "./src/components/fetch-example/fetch-example.tsx": [],
+    "./src/components/my-component/my-component.tsx": [],
+    "./src/components/scoped-example/scoped-example.tsx": [],
+    "./src/components/shadow-example/shadow-example.tsx": [],
+    "./src/components/slot-example/slot-example.tsx": [],
+    "./src/components/slot-scoped-example/slot-scoped-example.tsx": [],
+    "./src/components/slot-shadow-example/slot-shadow-example.tsx": []
   },
   "collections": []
 }
