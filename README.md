@@ -25,8 +25,9 @@ config.addTransform("ssr", async (content, outputPath) => {
 ## dev
 
 ```bash
-yarn
-yarn start
+pnpm i
+pnpm build
+pnpm serve
 ```
 
 more info coming soon!
